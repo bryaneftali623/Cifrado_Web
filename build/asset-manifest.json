@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Cifrado_Web/build/static/css/main.98117696.css",
+    "main.js": "/Cifrado_Web/build/static/js/main.904ddcc4.js",
+    "static/js/453.dac43139.chunk.js": "/Cifrado_Web/build/static/js/453.dac43139.chunk.js",
+    "index.html": "/Cifrado_Web/build/index.html",
+    "main.98117696.css.map": "/Cifrado_Web/build/static/css/main.98117696.css.map",
+    "main.904ddcc4.js.map": "/Cifrado_Web/build/static/js/main.904ddcc4.js.map",
+    "453.dac43139.chunk.js.map": "/Cifrado_Web/build/static/js/453.dac43139.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.98117696.css",
+    "static/js/main.904ddcc4.js"
+  ]
+}
