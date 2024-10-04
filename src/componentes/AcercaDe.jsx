@@ -11,7 +11,7 @@ const AcercaDe = () => {
                 <ul>
                     <li><strong>Nombre:</strong> BRYAN NEFTALI CRUZ HERNANDEZ</li>
                     <li><strong>Matrícula:</strong> 20221094</li>
-                    <li><strong>Numero De BIna:</strong> 6  </li>
+                    <li><strong>Numero De BIna:</strong> 5  </li>
                     <li><strong>Carrera:</strong> INGENIERIA EN TECNOLOGIAS DE LA INFORMACION</li>
                     <li><strong>Docente:</strong> MCE. ANA MARIA FELIPE REDONDO</li>
                     <li><strong>Grado y Grupo:</strong> " 7 " CUATRIMESTRE GRUPO "B"  </li>
