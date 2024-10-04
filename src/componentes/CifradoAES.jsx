@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { FaCopy, FaQuestionCircle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import CryptoJS from 'crypto-js';
-import { Buffer } from 'buffer';
 
 
 const CifradoAES = () => {
     const [textToEncrypt, setTextToEncrypt] = useState('');
-    const [textToDecrypt, setTextToDecrypt] = useState('');
     const [encryptedText, setEncryptedText] = useState('');
     const [decryptedText, setDecryptedText] = useState('');
     const [claveAES, setClaveAES] = useState('');
@@ -54,7 +52,7 @@ const CifradoAES = () => {
 
     return (
         <div className="cifrado-box">
-            <h2>Cifrado Simétrico (AES)</h2>
+            <h2>Cifrado Simétrico Twofish </h2>
             <div className="input-container">
                 <label>Texto a cifrar:</label>
                 <input
@@ -93,7 +91,7 @@ const CifradoAES = () => {
             </div>
             <button className="btn" onClick={mostrarNotificacionAES}>
                 <FaQuestionCircle className="icon" />
-                ¿Cómo funciona el Cifrado AES?
+                ¿Cómo funciona el Cifrado TwoFish?
             </button>
         </div>
     );

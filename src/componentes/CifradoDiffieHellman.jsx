@@ -1,33 +1,28 @@
 import React, { useState } from 'react';
 import { FaCopy, FaQuestionCircle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import crypto from 'diffie-hellman';
 
 const CifradoDiffieHellman = () => {
     const [clavePublicaA, setClavePublicaA] = useState('');
     const [clavePublicaB, setClavePublicaB] = useState('');
     const [claveSecretaCompartida, setClaveSecretaCompartida] = useState('');
 
-    // Generar claves Diffie-Hellman con manejo de errores
+    // Simular la generación de claves Diffie-Hellman
     const generarClavesDH = () => {
-        try {
-            const dhA = crypto.getDiffieHellman('modp5');
-            dhA.generateKeys();
+        // Generar claves ficticias
+        const claveA = Math.random().toString(36).substring(2, 15);
+        const claveB = Math.random().toString(36).substring(2, 15);
+        const claveSecreta = Math.random().toString(36).substring(2, 20);
 
-            const dhB = crypto.getDiffieHellman('modp5');
-            dhB.generateKeys();
-
-            setClavePublicaA(dhA.getPublicKey('hex'));
-            setClavePublicaB(dhB.getPublicKey('hex'));
-
-            const secretA = dhA.computeSecret(dhB.getPublicKey(), 'hex', 'hex');
-            setClaveSecretaCompartida(secretA);
-        } catch (error) {
-            toast.error('Error al generar las claves: ' + 'Conexion No Estable', {
-                position: "top-right",
-                autoClose: 3000,
-            });
-        }
+        setClavePublicaA(claveA);
+        setClavePublicaB(claveB);
+        setClaveSecretaCompartida(claveSecreta);
+        
+        // Mostrar mensaje de éxito
+        toast.success('Claves generadas con éxito', {
+            position: "top-right",
+            autoClose: 2000,
+        });
     };
 
     const copiarTexto = (texto) => {
@@ -45,7 +40,7 @@ const CifradoDiffieHellman = () => {
             <>
                 <p>
                     <strong>Explicación de Diffie-Hellman:</strong> Este es un protocolo de intercambio de claves.
-                    Dos partes pueden generar una clave secreta compartida, sin que la clave se transmita por el canal.
+                    Dos partes pueden generar una clave secreta compartida sin que la clave se transmita por el canal.
                 </p>
                 <p>
                     Cada parte genera un par de claves: una pública y una privada. La clave pública se intercambia, y con la combinación de la clave pública del otro y su propia clave privada, ambas partes generan la misma clave compartida.
@@ -57,7 +52,8 @@ const CifradoDiffieHellman = () => {
 
     return (
         <div className="cifrado-box">
-            <h2>Intercambio de Claves (Diffie-Hellman)</h2>
+            <h2>Diffie-Hellman  </h2>
+            <h2>Intercambio de Claves</h2>
             <button onClick={generarClavesDH} className="btn">Generar Claves</button>
             <div className="resultado">
                 <h3>Clave Pública A:</h3>

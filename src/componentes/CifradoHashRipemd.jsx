@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaCopy, FaQuestionCircle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import CryptoJS from 'crypto-js';
-import { Buffer } from 'buffer';
 
 
 const CifradoHashRipemd = () => {

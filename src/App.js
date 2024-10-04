@@ -5,22 +5,25 @@ import CifradoEscitala from './componentes/CifradoEscitala';
 import CifradoAES from './componentes/CifradoAES';
 import CifradoDiffieHellman from './componentes/CifradoDiffieHellman';
 import CifradoHashRipemd from './componentes/CifradoHashRipemd';
-import { ToastContainer } from 'react-toastify'; // Asegúrate de importar ToastContainer
-import 'react-toastify/dist/ReactToastify.css'; // Asegúrate de importar los estilos de Toastify
+import AcercaDe from './componentes/AcercaDe'; 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App"> 
+      
         <h1>Aplicación de Cifrados</h1>
 
         {/* Menú de navegación */}
         <div className="navbar">
           <Link to="/cesar">Cifrado César</Link>
           <Link to="/escitala">Cifrado Escítala</Link>
-          <Link to="/aes">Cifrado AES</Link>
+          <Link to="/aes">Cifrado Twofish</Link>
           <Link to="/diffie-hellman">Diffie-Hellman</Link>
           <Link to="/ripemd">RIPEMD-160</Link>
+          <Link to="/acerca-de">Acerca de</Link>  
         </div>
 
         {/* Rutas para los componentes */}
@@ -30,9 +33,10 @@ function App() {
           <Route path="/aes" element={<CifradoAES />} />
           <Route path="/diffie-hellman" element={<CifradoDiffieHellman />} />
           <Route path="/ripemd" element={<CifradoHashRipemd />} />
+          <Route path="/acerca-de" element={<AcercaDe />} />  
         </Routes>
 
-        <ToastContainer /> {/* Asegúrate de incluir esto */}
+        <ToastContainer /> 
       </div>
     </Router>
   );
