@@ -9,8 +9,7 @@ const AcercaDe = () => {
             <div className="info-section">
                 <h3>Datos Personales</h3>
                 <ul>
-                    <li><strong>Nombre:</strong> BRYAN NEFTALI CRUZ HERNANDEZ</li>
-                    <li><strong>Matrícula:</strong> 20221094</li>
+                    <li><strong>Nombres:</strong> BRYAN NEFTALI CRUZ HERNANDEZ (20221094) && EDILBERTO HERNANDEZ RAMIREZ (20221034)</li>
                     <li><strong>Numero De BIna:</strong> 5</li>
                     <li><strong>Carrera:</strong> INGENIERIA EN TECNOLOGIAS DE LA INFORMACION</li>
                     <li><strong>Docente:</strong> MCE. ANA MARIA FELIPE REDONDO</li>
